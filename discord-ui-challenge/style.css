@@ -12,18 +12,37 @@ body {
   color: #DBDEE1;
 }
 
+
+/* 2CA45C */
+.img-green {
+  filter: invert(53%) sepia(38%) saturate(690%) hue-rotate(91deg) brightness(90%) contrast(99%);
+}
+
+/* CACBCE */
+.img-grey-light {
+  filter: invert(83%) sepia(3%) saturate(181%) hue-rotate(187deg) brightness(95%) contrast(102%);
+}
+
+/* 949BA3 */
+.img-grey-dark {
+  filter: invert(66%) sepia(11%) saturate(268%) hue-rotate(174deg) brightness(93%) contrast(84%);
+}
+
+/* #DBDEE1 */
+.img-discord {
+  filter: invert(93%) sepia(10%) saturate(73%) hue-rotate(169deg) brightness(99%) contrast(84%);
+}
+
 #nav-server {
   display: flex;
   justify-content: center;
   background-color: #1E1F22;
 
-  #list-server {
-    width: 100%;
-  }
-
   .server {
     display: flex;
     align-items: center;
+    list-style-type: none;
+    width: 72px;
   }
 
   .server-active {
@@ -42,10 +61,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 8px 0px 8px;
     width: 48px;
     height: 48px;
-    list-style-type: none;
+    margin: 10px 8px 0px 8px;
     background-color: #313338;
     border-radius: 50%;
   }
@@ -56,16 +74,78 @@ body {
   }
 
   hr {
-    margin: 8px 0px 0px 19px;
     width: 30px;
     height: 1px;
+    margin: 8px 0px 0px 19px;
     color: #35363c;
     background-color: #35363c;
   }
 }
 
 #nav-channel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #2B2D31;
+
+  #server-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 15px;
+    height: 48px;
+  }
+
+  .icon-channel-arrow {
+    height: 1em;
+  }
+
+  .icon-channel-plus {
+    height: 1.5em;
+  }
+
+  .icon-channel-setting {
+    height: 1em;
+  }
+
+  .icon-channel-hash {
+    height: 1.3em;
+    margin-right: 5px;
+  }
+
+  .channel-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 33px;
+    margin-top: 10px;
+    margin-right: 18px;
+    font-size: 12px;
+    color: #949BA3;
+    list-style-type: none;
+  }
+
+  .channel {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin: 0px 10px;
+    padding: 0px 10px;
+    font-size: 15px;
+    color: #949BA3;
+    list-style-type: none;
+    border-radius: 5px;
+  }
+
+  .channel-active {
+    justify-content: space-between;
+    color: #FFFFFF;
+    background-color: #3F4248;
+  }
+
+  hr {
+    color: #27282C;
+  }
 }
 
 #chat {
