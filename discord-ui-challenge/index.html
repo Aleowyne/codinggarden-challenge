@@ -12,82 +12,82 @@
   <div id="nav-server">
     <ul>
       <li class="server">
-        <span class="server-inactive"></span>
-        <span class="icon-server">
+        <div class="server-inactive"></div>
+        <div class="icon-server">
           <img src="./icons/discord-logo.svg" alt="Logo Discord" class="img-discord">
-        </span>
+        </div>
       </li>
       <hr>
       <li class="server">
-        <span class="server-active"></span>
-        <span class="icon-server icon-server-active">HW</span>
+        <div class="server-active"></div>
+        <div class="icon-server icon-server-active">HW</div>
       </li>
       <li class="server">
-        <span class="server-inactive"></span>
-        <span class="icon-server">
+        <div class="server-inactive"></div>
+        <div class="icon-server">
           <img src="./icons/plus.svg" alt="Add server" class="img-green">
-        </span>
+        </div>
       </li>
       <li class="server">
-        <span class="server-inactive"></span>
-        <span class="icon-server">
+        <div class="server-inactive"></div>
+        <div class="icon-server">
           <img src="./icons/compass.svg" alt="Explore server" class="img-green">
-        </span>
+        </div>
       </li>
       <hr>
       <li class="server">
-        <span class="server-inactive"></span>
-        <span class="icon-server">
+        <div class="server-inactive"></div>
+        <div class="icon-server">
           <img src="./icons/download.svg" alt="Download Discord" class="img-green">
-        </span>
+        </div>
       </li>
     </ul>
   </div>
   <div id="nav-channel">
     <div>
       <div id="server-title">
-        <span>Hello World</span>
-        <img src="./icons/arrow-down.svg" alt="Server settings" class="img-grey-light">
+        <div>Hello World</div>
+        <img src="./icons/arrow-down.svg" alt="Server settings" class="img-grey-very-light">
       </div>
       <hr>
       <ul>
         <li class="channel-group">
-          <span>
+          <div>
             <img src="./icons/arrow-down.svg" alt="Hide channel" class="icon-channel-arrow img-grey-dark">
             TEXT CHANNELS
-          </span>
+          </div>
           <img src="./icons/plus.svg" alt="Add channel" class="icon-channel-plus img-grey-dark">
         </li>
         <li class="channel">
-          <span>
+          <div>
             <img src="./icons/hash.svg" alt="Channel" class="icon-channel-hash img-grey-dark">
             chat
-          </span>
+          </div>
         </li>
         <li class="channel channel-active">
-          <span>
+          <div>
             <img src="./icons/hash.svg" alt="Channel" class="icon-channel-hash img-grey-dark">
             general
-          </span>
-          <span>
-            <img src="./icons/create-invite.svg" alt="Create invite" class="icon-channel-setting img-grey-light">
-            <img src="./icons/settings.svg" alt="Add channel" class="icon-channel-setting img-grey-light">
-          </span>
+          </div>
+          <div>
+            <img src="./icons/create-invite.svg" alt="Create invite" class="icon-channel-setting img-grey-very-light">
+            <img src="./icons/settings.svg" alt="Add channel" class="icon-channel-setting img-grey-very-light">
+          </div>
         </li>
       </ul>
       <ul>
         <li class="channel-group">
-          <span>
+          <div>
             <img src="./icons/arrow-down.svg" alt="Hide channel" class="icon-channel-arrow img-grey-dark">
             VOICE CHANNELS
-          </span>
+          </div>
           <img src="./icons/plus.svg" alt="Add channel" class="icon-channel-plus img-grey-dark">
         </li>
         <li class="channel">
-          <span>
+          <div>
             <img src="./icons/speaker.svg" alt="Audio Channel" class="icon-channel-hash img-grey-dark">
             General
-          </span>
+          </div>
         </li>
       </ul>
     </div>
@@ -96,17 +96,63 @@
         <img src="./icons/discord-logo.svg" alt="User Icon" class="img-discord">
       </div>
       <div id="user">
-        <span class="username">User</span>
-        <span class="userid">another_user1</span>
+        <div class="username">User</div>
+        <div class="userid">another_user1</div>
       </div>
       <div id="user-action">
-        <img src="./icons/mute.svg" alt="Micro mute" class="icon-user img-grey-light">
-        <img src="./icons/headphones.svg" alt="Headphones" class="icon-user img-grey-light">
-        <img src="./icons/settings.svg" alt="User settings" class="icon-user img-grey-light">
+        <img src="./icons/mute.svg" alt="Micro mute" class="icon-user img-grey-very-light">
+        <img src="./icons/headphones.svg" alt="Headphones" class="icon-user img-grey-very-light">
+        <img src="./icons/settings.svg" alt="User settings" class="icon-user img-grey-very-light">
       </div>
     </div>
   </div>
-  <div id="chat"></div>
+  <div id="chat">
+    <div>
+      <div id="chat-action">
+        <div>
+          <img src="./icons/hash.svg" alt="Channel" class="icon-channel-hash img-grey-dark">
+          general
+        </div>
+        <div>
+          <img src="./icons/message-thread.svg" alt="" class="icon-chat img-grey-light">
+          <img src="./icons/bell.svg" alt="" class="icon-chat img-grey-light">
+          <img src="./icons/pin.svg" alt="" class="icon-chat img-grey-light">
+          <img src="./icons/users.svg" alt="" class="icon-chat img-grey-light">
+          <span class="form-search">
+            <img src="./icons/search.svg" alt="" class="icon-search img-grey-dark">
+            <input type="text" class="input-search" placeholder="Search">
+          </span>
+          <img src="./icons/inbox.svg" alt="" class="icon-chat img-grey-light">
+          <img src="./icons/circle-question.svg" alt="" class="icon-chat img-green">
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div>
+      <div id="chat-message">
+        <div class="chat-hash">
+          <img src="./icons/hash.svg" alt="" class="icon-chat-hash img-white">
+        </div>
+        <h1>Welcome to #general!</h1>
+        <p id="chat-channel-intro">This is the start of the #general channel.</p>
+        <p id="chat-channel-edit">
+          <img src="./icons/pencil.svg" alt="" class="img-blue"> Edit channel
+        </p>
+      </div>
+      <div id="chat-input">
+        <span class="form-chat">
+          <div class="icon-chat-settings">
+            <img src="./icons/gift.svg" alt="" class="icon-chat img-grey-light">
+            <img src="./icons/gif.svg" alt="" class="icon-chat img-grey-light">
+            <img src="./icons/sticker.svg" alt="" class="icon-chat img-grey-light">
+            <div class="icon-chat-emote"></div>
+          </div>
+          <img src="./icons/circle-plus.svg" alt="" class="icon-chat-add img-grey-light">
+          <input type="text" class="input-chat" placeholder="Message #general">
+        </span>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
