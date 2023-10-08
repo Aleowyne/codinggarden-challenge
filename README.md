@@ -1,4 +1,4 @@
 # CodingGarden Challenge
 Challenges CodingGarden - My solutions
 
-- Discord UI Challenge (In process) : https://github.com/CodingGarden/discord-ui-challenge
+- Discord UI Challenge : https://github.com/CodingGarden/discord-ui-challenge

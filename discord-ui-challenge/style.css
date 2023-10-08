@@ -1,3 +1,18 @@
+:root {
+  /* FFFFFF */
+  --white: invert(100%) sepia(0%) saturate(0%) hue-rotate(258deg) brightness(110%) contrast(100%);
+  /* 2CA45C */
+  --green: invert(53%) sepia(38%) saturate(690%) hue-rotate(91deg) brightness(90%) contrast(99%);
+  /* CACBCE */
+  --grey-very-light: invert(83%) sepia(3%) saturate(181%) hue-rotate(187deg) brightness(95%) contrast(102%);
+  /* B5BAC1 */
+  --grey-light: invert(80%) sepia(9%) saturate(180%) hue-rotate(175deg) brightness(93%) contrast(88%);
+  /* 949BA3 */
+  --grey-dark: invert(66%) sepia(11%) saturate(268%) hue-rotate(174deg) brightness(93%) contrast(84%);
+  /* 1DA9F8 */
+  --blue: Invert(47%) sepia(75%) saturate(880%) hue-rotate(171deg) brightness(101%) contrast(95%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,35 +27,28 @@ body {
   color: #DBDEE1;
 }
 
-
-
 .img-white {
-  filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(258deg) brightness(110%) contrast(100%);
+  filter: var(--white);
 }
 
-/* 2CA45C */
 .img-green {
-  filter: invert(53%) sepia(38%) saturate(690%) hue-rotate(91deg) brightness(90%) contrast(99%);
+  filter: var(--green);
 }
 
-/* CACBCE */
 .img-grey-very-light {
-  filter: invert(83%) sepia(3%) saturate(181%) hue-rotate(187deg) brightness(95%) contrast(102%);
+  filter: var(--grey-very-light);
 }
 
-/* B5BAC1 */
 .img-grey-light {
-  filter: invert(80%) sepia(9%) saturate(180%) hue-rotate(175deg) brightness(93%) contrast(88%);
+  filter: var(--grey-light);
 }
 
-/* 949BA3 */
 .img-grey-dark {
-  filter: invert(66%) sepia(11%) saturate(268%) hue-rotate(174deg) brightness(93%) contrast(84%);
+  filter: var(--grey-dark);
 }
 
-/* 1DA9F8 */
 .img-blue {
-  filter: invert(47%) sepia(75%) saturate(880%) hue-rotate(171deg) brightness(101%) contrast(95%);
+  filter: var(--blue);
 }
 
 /* #DBDEE1 */
@@ -48,13 +56,13 @@ body {
   filter: invert(93%) sepia(10%) saturate(73%) hue-rotate(169deg) brightness(99%) contrast(84%);
 }
 
+hr {
+  color: #27282C;
+}
+
 .icon-channel-hash {
   height: 1.3em;
   vertical-align: bottom;
-}
-
-hr {
-  color: #27282C;
 }
 
 #nav-server {
@@ -90,11 +98,33 @@ hr {
     margin: 10px 8px 0px 8px;
     background-color: #313338;
     border-radius: 50%;
+    cursor: pointer;
   }
 
-  .icon-server-active {
+  .icon-server-blue-active {
     background-color: #596AEE;
     border-radius: 30%;
+  }
+
+  .icon-server-blue-inactive:hover {
+    background-color: #596AEE;
+    border-radius: 30%;
+  }
+
+  .icon-server-green-inactive:hover {
+    background-color: #2CA45C;
+    border-radius: 30%;
+
+    &>img {
+      filter: var(--white);
+    }
+  }
+
+  .server:hover>.server-inactive {
+    height: 18px;
+    margin-top: 10px;
+    border: 2px solid #F2F3F5;
+    border-radius: 0px 5px 5px 0px;
   }
 
   hr {
@@ -115,9 +145,18 @@ hr {
   #server-title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0px 15px;
+    width: 225px;
+    padding-left: 15px;
     height: 48px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #35373c;
+    }
+  }
+
+  .icon-server-setting {
+    margin-left: 100px;
   }
 
   .icon-channel-arrow {
@@ -126,11 +165,19 @@ hr {
 
   .icon-channel-plus {
     height: 1.5em;
+
+    &:hover {
+      filter: var(--white);
+    }
   }
 
   .icon-channel-setting {
     height: 1em;
     vertical-align: bottom;
+
+    &:hover {
+      filter: var(--white);
+    }
   }
 
   .channel-group {
@@ -142,18 +189,24 @@ hr {
     font-size: 12px;
     color: #949BA3;
     list-style-type: none;
+
+    &:hover {
+      color: #FFFFFF;
+      cursor: pointer;
+    }
   }
 
   .channel {
     display: flex;
     align-items: center;
     height: 30px;
-    margin: 0px 10px;
+    margin: 2px 10px;
     padding: 0px 5px;
     font-size: 15px;
     color: #949BA3;
     list-style-type: none;
     border-radius: 5px;
+    cursor: pointer;
   }
 
   .channel-active {
@@ -162,12 +215,31 @@ hr {
     background-color: #3F4248;
   }
 
+  .channel-inactive:hover {
+    justify-content: space-between;
+    color: #FFFFFF;
+    background-color: #35383d;
+
+    &>.icon-channel-setting-inactive {
+      display: inline;
+    }
+  }
+
+  .icon-channel-setting-inactive {
+    display: none;
+  }
+
   #channel-user {
     display: flex;
     align-items: center;
     height: 52px;
     padding: 0px 5px;
     background-color: #232428;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #3F4248;
+    }
   }
 
   #user-logo {
@@ -224,8 +296,17 @@ hr {
     height: 48px;
   }
 
+  .channel-title {
+    user-select: none;
+  }
+
   .icon-chat {
     padding-left: 12px;
+    cursor: pointer;
+
+    &:hover {
+      filter: var(--white);
+    }
   }
 
   .form-search {
@@ -243,6 +324,7 @@ hr {
     border: none;
 
     &:focus {
+      width: 225px;
       outline: none;
     }
   }
@@ -250,12 +332,13 @@ hr {
   .icon-search {
     position: absolute;
     top: -5px;
-    left: 130px;
+    right: 10px;
     height: 1em;
   }
 
   #chat-message {
     margin: 15px;
+    user-select: none;
   }
 
   .chat-hash {
@@ -281,6 +364,7 @@ hr {
   #chat-channel-edit {
     margin-left: 10px;
     color: #1DA9F8;
+    cursor: pointer;
   }
 
   .form-chat {
@@ -291,6 +375,11 @@ hr {
     position: absolute;
     top: 35px;
     left: 30px;
+    cursor: pointer;
+
+    &:hover {
+      filter: var(--white);
+    }
   }
 
   .icon-chat-settings {
@@ -308,6 +397,11 @@ hr {
     background: url(./icons/emoji-sprite.png);
     background-repeat: no-repeat;
     background-size: 242px 110px;
+    cursor: pointer;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
   }
 
   .input-chat {
