@@ -13,7 +13,9 @@
     <ul>
       <li class="server">
         <span class="server-inactive"></span>
-        <span class="icon-server"><img src="./icons/discord-logo.svg" alt="Logo Discord" class="img-discord"></span>
+        <span class="icon-server">
+          <img src="./icons/discord-logo.svg" alt="Logo Discord" class="img-discord">
+        </span>
       </li>
       <hr>
       <li class="server">
@@ -22,16 +24,22 @@
       </li>
       <li class="server">
         <span class="server-inactive"></span>
-        <span class="icon-server"><img src="./icons/plus.svg" alt="Add server" class="img-green"></span>
+        <span class="icon-server">
+          <img src="./icons/plus.svg" alt="Add server" class="img-green">
+        </span>
       </li>
       <li class="server">
         <span class="server-inactive"></span>
-        <span class="icon-server"><img src="./icons/compass.svg" alt="Explore server" class="img-green"></span>
+        <span class="icon-server">
+          <img src="./icons/compass.svg" alt="Explore server" class="img-green">
+        </span>
       </li>
       <hr>
       <li class="server">
         <span class="server-inactive"></span>
-        <span class="icon-server"><img src="./icons/download.svg" alt="Download Discord" class="img-green"></span>
+        <span class="icon-server">
+          <img src="./icons/download.svg" alt="Download Discord" class="img-green">
+        </span>
       </li>
     </ul>
   </div>
@@ -48,11 +56,13 @@
             <img src="./icons/arrow-down.svg" alt="Hide channel" class="icon-channel-arrow img-grey-dark">
             TEXT CHANNELS
           </span>
-          <span><img src="./icons/plus.svg" alt="Add channel" class="icon-channel-plus img-grey-dark"></span>
+          <img src="./icons/plus.svg" alt="Add channel" class="icon-channel-plus img-grey-dark">
         </li>
         <li class="channel">
-          <img src="./icons/hash.svg" alt="Channel" class="icon-channel-hash img-grey-dark">
-          chat
+          <span>
+            <img src="./icons/hash.svg" alt="Channel" class="icon-channel-hash img-grey-dark">
+            chat
+          </span>
         </li>
         <li class="channel channel-active">
           <span>
@@ -60,7 +70,7 @@
             general
           </span>
           <span>
-            <img src="./icons/create-invite.svg" alt="Create invite" class="img-grey-light">
+            <img src="./icons/create-invite.svg" alt="Create invite" class="icon-channel-setting img-grey-light">
             <img src="./icons/settings.svg" alt="Add channel" class="icon-channel-setting img-grey-light">
           </span>
         </li>
@@ -71,15 +81,30 @@
             <img src="./icons/arrow-down.svg" alt="Hide channel" class="icon-channel-arrow img-grey-dark">
             VOICE CHANNELS
           </span>
-          <span><img src="./icons/plus.svg" alt="Add channel" class="icon-channel-plus img-grey-dark"></span>
+          <img src="./icons/plus.svg" alt="Add channel" class="icon-channel-plus img-grey-dark">
         </li>
         <li class="channel">
-          <img src="./icons/speaker.svg" alt="Audio Channel" class="icon-channel-hash img-grey-dark">
-          General
+          <span>
+            <img src="./icons/speaker.svg" alt="Audio Channel" class="icon-channel-hash img-grey-dark">
+            General
+          </span>
         </li>
       </ul>
     </div>
-    <div>Bottom</div>
+    <div id="channel-user">
+      <div id="user-logo">
+        <img src="./icons/discord-logo.svg" alt="User Icon" class="img-discord">
+      </div>
+      <div id="user">
+        <span class="username">User</span>
+        <span class="userid">another_user1</span>
+      </div>
+      <div id="user-action">
+        <img src="./icons/mute.svg" alt="Micro mute" class="icon-user img-grey-light">
+        <img src="./icons/headphones.svg" alt="Headphones" class="icon-user img-grey-light">
+        <img src="./icons/settings.svg" alt="User settings" class="icon-user img-grey-light">
+      </div>
+    </div>
   </div>
   <div id="chat"></div>
 </body>
